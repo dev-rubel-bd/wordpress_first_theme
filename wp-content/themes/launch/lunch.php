@@ -1,20 +1,16 @@
 <?php
 
 /*
-Template Name: Launcher Homepage
+Template Name: Launch Homepage
 */
 
 ?>
-
-<!DOCTYPE html>
-	<head>
-	<meta charset="utf-8">
-	
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+<?php
+get_header();
+?>
 
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 		
 	<div class="fh5co-loader"></div>
 	
@@ -23,7 +19,7 @@ Template Name: Launcher Homepage
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<div id="fh5co-logo"><a href="index.html">Launch<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="index.html"><?php echo site_url();;?><strong>.</strong></a></div>
 				</div>
 			</div>
 		</div>
@@ -36,7 +32,7 @@ Template Name: Launcher Homepage
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>We Are Coming Very Soon!</h1>
+							<h1><?php the_title();?></h1>
 							<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<div class="row">
@@ -109,7 +105,6 @@ Template Name: Launcher Homepage
         enableUtc: false
     });
 </script>
-
-	</body>
-</html>
-
+<?php
+get_footer();
+?>

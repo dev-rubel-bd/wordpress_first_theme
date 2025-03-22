@@ -8,7 +8,7 @@ function launch_theme_setup(){
 
 
 }
-add_action("after_setup_thems","launch_theme_setup");
+add_action("after_setup_theme","launch_theme_setup");
 
 
 function launch_assets(){
@@ -17,7 +17,7 @@ function launch_assets(){
     wp_enqueue_style("icomoon-css", get_template_directory_uri()."/assets/css/icomoon.css");
     wp_enqueue_style("bootstrap-css", get_template_directory_uri()."/assets/css/bootstrap.css");
     wp_enqueue_style("style-css", get_template_directory_uri()."/assets/css/style.css");
-    wp_enqueue_style("launcher", get_stylesheet_uri());
+    wp_enqueue_style("launch", get_stylesheet_uri());
 
 
 
@@ -29,6 +29,7 @@ function launch_assets(){
     wp_enqueue_script("main-js", get_template_directory_uri()."/assets/js/main.js", array("jquery"), null,true);
     wp_enqueue_script("ejquery.min", get_template_directory_uri()."/assets/js/jquery.min.js", array("jquery"), null, true);
     wp_enqueue_script("jquery-stellar", get_template_directory_uri()."/assets/js/jquery.stellar.min.js", array("jquery"), null, true);
+    wp_enqueue_script("modernizr", get_template_directory_uri()."/assets/js/modernizr-2.6.2.min.js", array("jquery"), null, true);
 
 
 }
